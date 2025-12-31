@@ -24,7 +24,7 @@ const Route = createBrowserRouter([
     },
     {
         path:"/largeform",
-        element:<LargeForm/>
+        element:<><Dashboard/><LargeForm/></>
     },
     {
         path:"/admin",
