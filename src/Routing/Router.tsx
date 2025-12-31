@@ -20,7 +20,7 @@ const Route = createBrowserRouter([
     },
     {
         path:"/stopwatch",
-        element:<Stopwatch/>
+        element:<><Dashboard/><Stopwatch/> </>
     },
     {
         path:"/largeform",
@@ -35,7 +35,7 @@ const Route = createBrowserRouter([
             },
             {
                 path:"students",
-                element:<Students/>
+                element:<><Dashboard/><Students/></>
             },
             {
                 path:"students/add",
