@@ -21,7 +21,7 @@ import { tablesDB } from "../../Lib/AppwriteConfig";
 import { toast } from "sonner";
 import type { AddStudentFormData } from "../../Typescript/Interface";
 
-const AddPage = () => {
+const AddPage = ({control}:any) => {
   const [loading, setLoading] = useState(false);
 
   // const navigate = useNavigate();
@@ -60,7 +60,7 @@ const AddPage = () => {
 
   const {
     // register,
-    control,
+    // control,
     reset,
     //   setValue,
     handleSubmit,
