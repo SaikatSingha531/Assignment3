@@ -12,7 +12,9 @@ import { Query } from "appwrite";
 import { toast } from "sonner";
 import Cookies from "js-cookie";
 import type { LoginFormData } from "../Typescript/Interface";
-const Login = () => {
+
+
+const Login = ({control}: any) => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -55,7 +57,7 @@ const Login = () => {
 
   const {
     // register,
-    control,
+    // control,
       reset,
     //   setValue,
     handleSubmit,
