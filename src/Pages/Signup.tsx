@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { account, tablesDB } from "../Lib/AppwriteConfig";
 import { ID } from "appwrite";
 import { toast } from "sonner";
-import type { DynamicInputProps } from "../Typescript/DynamicInput";
+// import type { DynamicInputProps } from "../Typescript/DynamicInput";
 
 type SignupFormData = {
   fName: string;
@@ -19,7 +19,7 @@ type SignupFormData = {
 };
 
 
-const Signup = ({control}:DynamicInputProps<T>) => {
+const Signup = ({control}:any) => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
