@@ -8,16 +8,18 @@ import Cookies from "js-cookie";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      await account.deleteSession("current");
-      navigate("/");
-      toast.success("Logout Successfully");
-      Cookies.remove("token");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+ const handleLogout = async () => {
+  try {
+    await account.get(); // ensure session exists
+    await account.deleteSession("current");
+    Cookies.remove("token");
+    toast.success("Logged out successfully");
+    navigate("/login");
+  } catch (error:any) {
+    toast.error("Not logged in!",error);
+  }
+};
+
 
   return (
     <>
