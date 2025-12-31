@@ -19,7 +19,7 @@ type SignupFormData = {
 };
 
 
-const Signup = ({control}:DynamicInputProps) => {
+const Signup = ({control}:DynamicInputProps<T>) => {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
